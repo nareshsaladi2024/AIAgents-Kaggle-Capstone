@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Service account keys and credentials
+*.json
+!package.json
+!package-lock.json
+credentials/
+*-key.json
+*-credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+sample_agent_tmp*/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# ADK/Deployment
+*.ipynb
+
