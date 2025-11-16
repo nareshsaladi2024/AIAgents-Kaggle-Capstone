@@ -7,7 +7,7 @@ if ($args.Count -gt 0) {
     $message = $args[0]
 }
 
-Write-Host "📤 Querying deployed agent..." -ForegroundColor Green
+Write-Host "Querying deployed agent..." -ForegroundColor Green
 Write-Host "   Message: $message" -ForegroundColor Cyan
 Write-Host ""
 
@@ -21,14 +21,14 @@ try {
         -ContentType "application/json" `
         -Body $body
     
-    Write-Host "✅ Response received:" -ForegroundColor Green
+    Write-Host "Response received:" -ForegroundColor Green
     Write-Host ""
     $response.Content | ConvertFrom-Json | ConvertTo-Json -Depth 10
 } catch {
-    Write-Host "❌ Error querying agent:" -ForegroundColor Red
+    Write-Host "Error querying agent:" -ForegroundColor Red
     Write-Host $_.Exception.Message -ForegroundColor Red
     Write-Host ""
-    Write-Host "💡 Make sure the ADK API server is running:" -ForegroundColor Yellow
+    Write-Host "Make sure the ADK API server is running:" -ForegroundColor Yellow
     Write-Host "   .\query-via-adk-api.ps1" -ForegroundColor Cyan
 }
 
